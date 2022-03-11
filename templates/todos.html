@@ -14,12 +14,14 @@
 <table>
     <thead>
     <th>Tytuł</th>
+    <th>Autor</th>
     <th>Opis</th>
     <th>Czy przeczytana?</th>
     </thead>
 {% for todo in todos %}
     <tr>
         <td><a href="/todos/{{ loop.index }}">{{ todo.title }}</a></td>
+        <td>{{ todo.author }}</td>
         <td>{{ todo.description }}</td>
         <td>{{ todo.done }}</td>
     </tr>
